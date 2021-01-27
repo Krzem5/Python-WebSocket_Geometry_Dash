@@ -256,7 +256,15 @@ def start(url,wsurl,curl,cwsurl):
 	with HTTPServer(("localhost",8000),Client) as httpd:
 		print("HTTP server started on port 8000!")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 661c85a (Push Update 01/27/2021, 11:27:44)
 >>>>>>> 151aeff (Push Update 01/27/2021, 11:27:44)
 		httpd.serve_forever()
+=======
+>>>>>>> 661c85a (Push Update 01/27/2021, 11:27:44)
+		httpd.serve_forever()
+=======
+		httpd.serve_forever()
+>>>>>>> 1e4c84a (Push Update 01/27/2021, 12:44:01)
+>>>>>>> 63673e7 (Push Update 01/27/2021, 12:44:01)
