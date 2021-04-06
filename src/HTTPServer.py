@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import io
@@ -126,6 +127,8 @@ def start(url,wsurl,curl,cwsurl):
 	with HTTPServer(("localhost",8000),Client) as httpd:
 		print("HTTP server started on port 8000!")
 =======
+=======
+>>>>>>> f6398e4 (Push Update 04/06/2021, 16:28:55)
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import io
@@ -137,9 +140,8 @@ import urllib
 
 
 
-global WS_URL
+global WS_URL,C_WS_URL
 WS_URL=""
-global C_WS_URL
 C_WS_URL=""
 
 
@@ -257,6 +259,7 @@ def start(url,wsurl,curl,cwsurl):
 		print("HTTP server started on port 8000!")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 661c85a (Push Update 01/27/2021, 11:27:44)
 >>>>>>> 151aeff (Push Update 01/27/2021, 11:27:44)
@@ -268,3 +271,6 @@ def start(url,wsurl,curl,cwsurl):
 		httpd.serve_forever()
 >>>>>>> 1e4c84a (Push Update 01/27/2021, 12:44:01)
 >>>>>>> 63673e7 (Push Update 01/27/2021, 12:44:01)
+=======
+		httpd.serve_forever()
+>>>>>>> f6398e4 (Push Update 04/06/2021, 16:28:55)

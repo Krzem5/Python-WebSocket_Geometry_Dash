@@ -11,24 +11,20 @@
 					_socket_init();
 				});
 			}
-
-
-
 			function _socket_init(){
 				window.SOCKET=null;
 				function join(){
-					var old_r;
-					SOCKET=new WebSocket(WS_URL);
-					SOCKET.onopen=function(){
+					window.SOCKET=new WebSocket(WS_URL);
+					window.SOCKET.onopen=function(){
 						wr.innerHTML="";
 						RENDERING=false;
 					}
-					SOCKET.onclose=function(){
+					window.SOCKET.onclose=function(){
 						join();
 						wr.innerHTML="";
 						RENDERING=false;
 					}
-					SOCKET.onmessage=function(e){
+					window.SOCKET.onmessage=function(e){
 						try{
 							if (e.data=="null"){
 								return;
@@ -50,7 +46,7 @@
 							RENDERING=false;
 						}
 					}
-					SOCKET.onerror=function(e){
+					window.SOCKET.onerror=function(e){
 						e.stopImmediatePropagation();
 						e.stopPropagation();
 						e.preventDefault();

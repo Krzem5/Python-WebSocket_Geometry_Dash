@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 from PIL import Image
@@ -412,6 +413,8 @@ if (__name__=="__main__"):
 	start()
 =======
 >>>>>>> 63673e7 (Push Update 01/27/2021, 12:44:01)
+=======
+>>>>>>> f6398e4 (Push Update 04/06/2021, 16:28:55)
 from PIL import Image
 from SimpleWebSocketServer import SimpleWebSocketServer, WebSocket
 import os
@@ -486,7 +489,7 @@ class Game:
 	def __init__(self):
 		a=False
 		for i in range(0,len(GAMES)-1):
-			if (GAMES[i]==None):
+			if (GAMES[i] is None):
 				GAMES[i]=self
 				a=True
 				break
@@ -669,7 +672,7 @@ class Client(WebSocket):
 		global SOCKETS
 		SOCKETS+=[self]
 		for g in GAMES:
-			if (g==None):
+			if (g is None):
 				continue
 			if (g.STATE==0 or g.STATE==1):
 				self.game=g
@@ -754,7 +757,7 @@ class CClient(WebSocket):
 			for s in g.SOCKETS:
 				ss+=f"{s.color}-{COLOR_NAMES[s.color]}."
 			wc=(g.WC if g.WC!="" else (g.PLAYERS[0].color if len(g.PLAYERS)>0 else None))
-			pls=("null."*(len(g.PLAYERS)) if len(g.PLAYERS)>1 or g.STATE<4 or wc==None else f"{wc}-{COLOR_NAMES[wc]}.")
+			pls=("null."*(len(g.PLAYERS)) if len(g.PLAYERS)>1 or g.STATE<4 or wc is None else f"{wc}-{COLOR_NAMES[wc]}.")
 			for s in g.PL_L[1:].split(","):
 				if (s==""):
 					continue
@@ -824,5 +827,8 @@ if (__name__=="__main__"):
 	start()
 =======
 	start()
+<<<<<<< HEAD
 >>>>>>> 1e4c84a (Push Update 01/27/2021, 12:44:01)
 >>>>>>> 63673e7 (Push Update 01/27/2021, 12:44:01)
+=======
+>>>>>>> f6398e4 (Push Update 04/06/2021, 16:28:55)
