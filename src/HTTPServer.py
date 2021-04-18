@@ -31,7 +31,7 @@ class Client(SimpleHTTPRequestHandler):
 			self.send_header("Last-Modified",0)
 			self.end_headers()
 			self.copyfile(f,self.wfile)
-			return
+			return None
 		path=os.getcwd()+"\\web"+path.replace(os.getcwd(),"")
 		if (os.path.isdir(path)):
 			parts=urllib.parse.urlsplit(self.path)
